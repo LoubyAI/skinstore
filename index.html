@@ -138,14 +138,28 @@
               <div>
                 <dt>Tailwind</dt>
                 <dd>
-                  <p class="button-classes"><code>rounded-full bg-blush px-3 hover:bg-white</code></p>
+                  <pre><code>&lt;button
+  type="button"
+  data-open-product="serum"
+  class="mt-3 min-h-10 rounded-full bg-blush px-3
+         text-xs uppercase hover:bg-white md:mt-[.85vw]
+         md:min-h-[clamp(1.6rem,2.16vw,2rem)] md:px-2"
+&gt;
+  Shop now
+&lt;/button&gt;</code></pre>
                   <p>Each class applies one style. <code>rounded-full</code> makes the button pill-shaped, <code>bg-blush</code> sets the background, and <code>px-3</code> adds horizontal padding. <code>hover:bg-white</code> makes the background white on hover. Tailwind generates the rules in <code>tailwind.css</code>.</p>
                 </dd>
               </div>
               <div>
                 <dt>Bootstrap</dt>
                 <dd>
-                  <p class="button-classes"><code>shop-button btn rounded-pill</code></p>
+                  <pre><code>&lt;button
+  type="button"
+  data-open-product="serum"
+  class="shop-button btn rounded-pill text-uppercase"
+&gt;
+  Shop now
+&lt;/button&gt;</code></pre>
                   <p>Bootstrap’s <code>btn</code> applies several base styles at once, and <code>rounded-pill</code> gives the button its shape. The custom <code>shop-button</code> rule in <code>bootstrap/styles.css</code> sets the padding, blush background, and white hover color.</p>
                 </dd>
               </div>

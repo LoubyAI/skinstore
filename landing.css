@@ -281,8 +281,21 @@ h3 {
   margin-top: .9rem;
 }
 
-.button-classes {
-  margin-block: .35rem .55rem;
+.button-comparison pre {
+  margin: .35rem 0 .65rem;
+  padding: .8rem 1rem;
+  border-radius: .5rem;
+  background: var(--blush);
+  font-size: .875rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.button-comparison pre code {
+  padding: 0;
+  background: transparent;
+  font-size: inherit;
 }
 
 code {
