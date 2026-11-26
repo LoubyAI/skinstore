@@ -129,7 +129,7 @@ h3 {
 .hero-copy p,
 .page-card p,
 .comparison p,
-.framework dd {
+.comparison dd {
   color: var(--muted);
 }
 
@@ -202,62 +202,47 @@ h3 {
 }
 
 .comparison {
-  margin-top: clamp(1.25rem, 3vw, 2rem);
-  border-block: 1px solid var(--line);
-}
-
-.comparison summary {
-  padding-block: .8rem;
-  color: var(--accent-dark);
-  cursor: pointer;
-}
-
-.comparison summary h2 {
-  display: inline;
-  font: 700 1rem/1.5 Arial, Helvetica, sans-serif;
-  letter-spacing: normal;
-}
-
-.comparison[open] {
-  padding-bottom: 1.25rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
 }
 
 .comparison > p {
   max-width: 68ch;
-  margin-top: .2rem;
-}
-
-.frameworks {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.6rem;
-  margin-top: 1.3rem;
+  margin-top: .55rem;
 }
 
 .framework {
-  min-width: 0;
-  padding: 1rem 0 0;
-  border-top: 1px solid var(--line);
+  grid-template-rows: auto auto 1fr auto;
 }
 
-.framework h3 {
-  margin-bottom: .5rem;
+.comparison dl {
+  display: grid;
+  gap: .95rem;
 }
 
 .framework dl {
-  display: grid;
-  gap: .7rem;
-  margin-top: 1rem;
+  align-content: start;
 }
 
-.framework dl > div {
-  display: grid;
-  grid-template-columns: 6rem minmax(0, 1fr);
-  gap: .2rem .7rem;
-}
-
-.framework dt {
+.comparison dt {
+  margin-bottom: .2rem;
   font-weight: 700;
+}
+
+.demo-notes {
+  margin-top: 1.5rem;
+  border-block: 1px solid var(--line);
+}
+
+.demo-notes summary {
+  padding-block: .8rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.demo-notes dl {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-bottom: 1.2rem;
 }
 
 code {
@@ -285,21 +270,11 @@ code {
 
 @media (max-width: 44rem) {
   .page-list,
-  .frameworks {
+  .demo-notes dl {
     grid-template-columns: 1fr;
-  }
-
-  .frameworks {
-    gap: 1.25rem;
   }
 
   .page-card {
     min-height: 0;
-  }
-}
-
-@media (max-width: 24rem) {
-  .framework dl > div {
-    grid-template-columns: 1fr;
   }
 }
