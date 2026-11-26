@@ -4,16 +4,16 @@
 
 - Bootstrap styles inside a html element using class="" with with prestyled component like btn where it appliese several styles at once adding padding/font/settings/round corners and transistion  like for hovering on a button. 
  The btn style is defined inside bootstrap.min.css and styled in style.css.
-  - [Bootstrap page] link:(bootstrap/index.html)
+  - [Bootstrap page] Check out link:(bootstrap/index.html)
 
 - Tailwind styles also inside a html element using class="" with but with individual styles class="round-full bg-blush ". Rules on like the color of bg-blush is inside tailwind.css. 
-  - [Tailwind page] link:(tailwind/index.html)
+  - [Tailwind page] Check out link:(tailwind/index.html)
 
 
 ## Interactive page:
 - Uses plain JavaScript and html and css. 
   - [Interactive routine builder] 
-  link: (interactive/index.html)
+ Check out link: (interactive/index.html)
 
 
 
