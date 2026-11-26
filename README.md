@@ -1,5 +1,7 @@
 # Skins Storefront
 
+[Open the project landing page](https://loubyai.github.io/skinstore/) to preview all three pages and compare Bootstrap and Tailwind.
+
 ## Compair Bootstrap vs Tailwind:
 
 - Bootstrap styles inside a html element using class="" with with prestyled component like btn where it appliese several styles at once adding padding/font/settings/round corners and transistion  like for hovering on a button. 

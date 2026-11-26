@@ -1,0 +1,271 @@
+:root {
+  color-scheme: light;
+  --paper: #fffaf7;
+  --surface: #fffdfb;
+  --blush: #f5e8e4;
+  --ink: #38262d;
+  --muted: #6c535b;
+  --accent: #794052;
+  --accent-dark: #5e2d3e;
+  --line: #ddcbc6;
+  --serif: Georgia, "Times New Roman", serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, dl, dd {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: .2em;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 4px;
+}
+
+.page-width {
+  width: min(calc(100% - 2rem), 72rem);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  padding: .5rem .8rem;
+  background: var(--surface);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  padding-block: .75rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font: 400 2rem/1 var(--serif);
+  letter-spacing: -.055em;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.4rem;
+}
+
+.site-header nav a,
+.site-footer a {
+  color: var(--muted);
+}
+
+.hero {
+  margin-block: clamp(1.5rem, 4vw, 3rem) 2rem;
+}
+
+.hero-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 23rem);
+  align-items: end;
+  gap: .85rem 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: clamp(2.65rem, 6.2vw, 5rem);
+  letter-spacing: -.055em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 2.85rem);
+  letter-spacing: -.04em;
+  scroll-margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  letter-spacing: -.025em;
+}
+
+.hero-copy p,
+.page-card p,
+.comparison p,
+.framework dd {
+  color: var(--muted);
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 28vw, 20rem);
+  border-radius: .9rem;
+  background: var(--blush);
+  object-fit: cover;
+  object-position: 59% center;
+}
+
+.page-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .9rem;
+  margin: .95rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: start;
+  gap: .6rem;
+  min-width: 0;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: .9rem;
+  background: var(--surface);
+}
+
+.routine-card {
+  background: var(--blush);
+}
+
+.page-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  margin-top: .2rem;
+  padding: .48rem .9rem;
+  border-radius: .45rem;
+  background: var(--accent);
+  color: white;
+  font-size: .875rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  background: var(--accent-dark);
+  color: white;
+  text-decoration: underline;
+}
+
+.comparison {
+  margin-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.comparison > p {
+  max-width: 68ch;
+  margin-top: .55rem;
+}
+
+.frameworks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin-top: 1.3rem;
+}
+
+.framework {
+  min-width: 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.framework h3 {
+  margin-bottom: .5rem;
+}
+
+.framework dl {
+  display: grid;
+  gap: .7rem;
+  margin-top: 1rem;
+}
+
+.framework dl > div {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: .2rem .7rem;
+}
+
+.framework dt {
+  font-weight: 700;
+}
+
+code {
+  padding: .08em .25em;
+  border-radius: .2em;
+  background: var(--blush);
+  color: var(--accent-dark);
+  font-size: .9em;
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+
+.site-footer .wordmark {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 52rem) {
+  .hero-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy p {
+    max-width: 45ch;
+  }
+}
+
+@media (max-width: 44rem) {
+  .page-list,
+  .frameworks {
+    grid-template-columns: 1fr;
+  }
+
+  .frameworks {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 24rem) {
+  .framework dl > div {
+    grid-template-columns: 1fr;
+  }
+}
