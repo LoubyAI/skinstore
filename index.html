@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore the Skins Storefront project and compare its Bootstrap, Tailwind, and interactive pages.">
+    <meta name="description" content="Explore Skins, an AI-assisted web project with Tailwind and Bootstrap storefronts and an interactive routine builder.">
     <title>Skins Storefront | Project Overview</title>
     <link rel="stylesheet" href="./landing.css">
   </head>
@@ -13,32 +13,88 @@
     <header class="site-header page-width">
       <a class="wordmark" href="./index.html" aria-label="Skins project home">Skins</a>
       <nav aria-label="Project navigation">
+        <a href="#project-title">About the project</a>
         <a href="#project-pages">Pages</a>
-        <a href="#compare">Framework comparison</a>
       </nav>
     </header>
 
     <main class="page-width">
       <section class="hero" aria-labelledby="project-title">
-        <div class="hero-copy">
-          <h1 id="project-title">Skins Storefront</h1>
-          <p>Explore two versions of the same skincare shop and try an interactive routine builder made with plain JavaScript.</p>
+        <div class="hero-intro">
+          <div class="hero-copy">
+            <h1 id="project-title" tabindex="-1">Skins Storefront</h1>
+            <p>Skins is an AI-assisted web development project. It explores how Tailwind and Bootstrap can style the same skincare storefront.</p>
+            <p>I used Codex to help build and refine both storefronts and to create an interactive routine builder with plain JavaScript.</p>
+          </div>
+          <img src="./interactive/assets/hero.jpg" width="2172" height="724" alt="Skins skincare products and pink flowers beside a woman" fetchpriority="high">
         </div>
-        <img src="./interactive/assets/hero.jpg" width="2172" height="724" alt="Skins skincare products and pink flowers beside a woman" fetchpriority="high">
+
+        <details class="comparison" id="compare">
+          <summary><h2>Compare Tailwind and Bootstrap</h2></summary>
+          <p>Both frameworks use class names in HTML to apply CSS rules. The way they group those styles makes them useful for different projects.</p>
+
+          <div class="frameworks">
+            <article class="framework">
+              <h3>Tailwind</h3>
+              <p>Utilities such as <code>rounded-full</code> and <code>bg-blush</code> each apply a specific style from the generated CSS.</p>
+              <dl>
+                <div>
+                  <dt>Pros</dt>
+                  <dd>Combining utilities gives you fine control over layout, spacing, and colors.</dd>
+                </div>
+                <div>
+                  <dt>Cons</dt>
+                  <dd>Class lists can get long. Changes to the utilities used in this project require a CSS rebuild.</dd>
+                </div>
+                <div>
+                  <dt>Good for</dt>
+                  <dd>Branded storefronts like Skins, portfolios, and campaign sites with custom layouts.</dd>
+                </div>
+                <div>
+                  <dt>In the demo</dt>
+                  <dd><code>md:grid-cols-4</code> gives the catalog four columns at the medium breakpoint. Motion can be added with utilities such as <code>transition-colors</code>, and the palette is defined with <code>@theme</code>.</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="framework">
+              <h3>Bootstrap</h3>
+              <p>The <code>btn</code> class applies a base set of button styles. This project adjusts the button colors in <code>bootstrap/styles.css</code>.</p>
+              <dl>
+                <div>
+                  <dt>Pros</dt>
+                  <dd>Ready-made buttons, forms, and tables make it quick to build a consistent interface.</dd>
+                </div>
+                <div>
+                  <dt>Cons</dt>
+                  <dd>A custom design can require extra CSS to override component defaults.</dd>
+                </div>
+                <div>
+                  <dt>Good for</dt>
+                  <dd>Admin dashboards, booking forms, and internal tools that can use standard components.</dd>
+                </div>
+                <div>
+                  <dt>In the demo</dt>
+                  <dd><code>row-cols-md-4</code> gives the catalog four columns at the medium breakpoint. Buttons get Bootstrap’s built-in transitions, and CSS variables set the Skins palette.</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </details>
       </section>
 
       <section class="project-pages" aria-labelledby="project-pages">
-        <h2 id="project-pages" tabindex="-1">Explore the pages</h2>
+        <h2 id="project-pages" tabindex="-1">Explore the three pages</h2>
         <ul class="page-list" role="list">
           <li class="page-card">
-            <h3>Bootstrap storefront</h3>
-            <p>Browse the catalog, search for a product, and try the shopping bag.</p>
-            <a class="page-link" href="./bootstrap/index.html">Open Bootstrap storefront</a>
+            <h3>Tailwind</h3>
+            <p>This version uses utility classes to build the storefront’s layout, colors, and spacing.</p>
+            <a class="page-link" href="./tailwind/index.html">Open Tailwind storefront</a>
           </li>
           <li class="page-card">
-            <h3>Tailwind storefront</h3>
-            <p>Explore the same shop and see how Tailwind utilities recreate the layout and styling.</p>
-            <a class="page-link" href="./tailwind/index.html">Open Tailwind storefront</a>
+            <h3>Bootstrap</h3>
+            <p>This version uses Bootstrap’s grid and button styles, with custom CSS for the Skins design.</p>
+            <a class="page-link" href="./bootstrap/index.html">Open Bootstrap storefront</a>
           </li>
           <li class="page-card routine-card">
             <h3>Interactive routine builder</h3>
@@ -46,59 +102,6 @@
             <a class="page-link" href="./interactive/index.html">Open routine builder</a>
           </li>
         </ul>
-      </section>
-
-      <section class="comparison" aria-labelledby="compare">
-        <h2 id="compare" tabindex="-1">Bootstrap vs. Tailwind</h2>
-        <p>Both frameworks use class names in HTML to apply CSS rules. The way they group those styles makes them useful for different projects.</p>
-
-        <div class="frameworks">
-          <article class="framework">
-            <h3>Bootstrap</h3>
-            <p>The <code>btn</code> class applies a base set of button styles. This project adjusts the button colors in <code>bootstrap/styles.css</code>.</p>
-            <dl>
-              <div>
-                <dt>Pros</dt>
-                <dd>Ready-made buttons, forms, and tables make it quick to build a consistent interface.</dd>
-              </div>
-              <div>
-                <dt>Cons</dt>
-                <dd>A custom design can require extra CSS to override component defaults.</dd>
-              </div>
-              <div>
-                <dt>Good for</dt>
-                <dd>Admin dashboards, booking forms, and internal tools that can use standard components.</dd>
-              </div>
-              <div>
-                <dt>In the demo</dt>
-                <dd><code>row-cols-md-4</code> gives the catalog four columns at the medium breakpoint. Buttons get Bootstrap’s built-in transitions, and CSS variables set the Skins palette.</dd>
-              </div>
-            </dl>
-          </article>
-
-          <article class="framework">
-            <h3>Tailwind</h3>
-            <p>Utilities such as <code>rounded-full</code> and <code>bg-blush</code> each apply a specific style from the generated CSS.</p>
-            <dl>
-              <div>
-                <dt>Pros</dt>
-                <dd>Combining utilities gives you fine control over layout, spacing, and colors.</dd>
-              </div>
-              <div>
-                <dt>Cons</dt>
-                <dd>Class lists can get long. Changes to the utilities used in this project require a CSS rebuild.</dd>
-              </div>
-              <div>
-                <dt>Good for</dt>
-                <dd>Branded storefronts like Skins, portfolios, and campaign sites with custom layouts.</dd>
-              </div>
-              <div>
-                <dt>In the demo</dt>
-                <dd><code>md:grid-cols-4</code> gives the catalog four columns at the medium breakpoint. Motion can be added with utilities such as <code>transition-colors</code>, and the palette is defined with <code>@theme</code>.</dd>
-              </div>
-            </dl>
-          </article>
-        </div>
       </section>
     </main>
 

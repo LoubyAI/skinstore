@@ -92,12 +92,16 @@ a:hover {
   margin-block: clamp(1.5rem, 4vw, 3rem) 2rem;
 }
 
-.hero-copy {
+.hero-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 23rem);
-  align-items: end;
-  gap: .85rem 1.5rem;
-  margin-bottom: 1.3rem;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: clamp(1.1rem, 4.2vw, 3rem);
+}
+
+.hero-copy p {
+  max-width: 45ch;
+  margin-top: .85rem;
 }
 
 h1, h2, h3 {
@@ -132,17 +136,21 @@ h3 {
 .hero img {
   display: block;
   width: 100%;
-  height: clamp(12rem, 28vw, 20rem);
+  height: clamp(13rem, 25vw, 19rem);
   border-radius: .9rem;
   background: var(--blush);
   object-fit: cover;
   object-position: 59% center;
 }
 
+.project-pages {
+  margin-block: clamp(2rem, 5vw, 3.5rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+
 .page-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .9rem;
+  gap: clamp(.75rem, 1.8vw, 1.25rem);
   margin: .95rem 0 0;
   padding: 0;
   list-style: none;
@@ -152,16 +160,23 @@ h3 {
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-items: start;
-  gap: .6rem;
+  gap: .85rem;
   min-width: 0;
-  padding: clamp(1rem, 2.5vw, 1.5rem);
+  min-height: 15rem;
+  padding: clamp(1.2rem, 2.8vw, 2rem);
   border: 1px solid var(--line);
   border-radius: .9rem;
   background: var(--surface);
 }
 
+.page-card h3 {
+  font-size: clamp(1.65rem, 2.9vw, 2.2rem);
+}
+
 .routine-card {
-  background: var(--blush);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
 }
 
 .page-link {
@@ -169,28 +184,47 @@ h3 {
   min-height: 2.75rem;
   align-items: center;
   margin-top: .2rem;
-  padding: .48rem .9rem;
-  border-radius: .45rem;
-  background: var(--accent);
-  color: white;
-  font-size: .875rem;
+  color: var(--accent-dark);
   font-weight: 700;
-  text-decoration: none;
 }
 
 .page-link:hover {
-  background: var(--accent-dark);
+  text-decoration-thickness: .13em;
+}
+
+.routine-card p,
+.routine-card .page-link {
   color: white;
-  text-decoration: underline;
+}
+
+.routine-card .page-link:focus-visible {
+  outline-color: white;
 }
 
 .comparison {
-  margin-block: clamp(2.5rem, 6vw, 4.5rem);
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+  border-block: 1px solid var(--line);
+}
+
+.comparison summary {
+  padding-block: .8rem;
+  color: var(--accent-dark);
+  cursor: pointer;
+}
+
+.comparison summary h2 {
+  display: inline;
+  font: 700 1rem/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+}
+
+.comparison[open] {
+  padding-bottom: 1.25rem;
 }
 
 .comparison > p {
   max-width: 68ch;
-  margin-top: .55rem;
+  margin-top: .2rem;
 }
 
 .frameworks {
@@ -244,12 +278,8 @@ code {
 }
 
 @media (max-width: 52rem) {
-  .hero-copy {
+  .hero-intro {
     grid-template-columns: 1fr;
-  }
-
-  .hero-copy p {
-    max-width: 45ch;
   }
 }
 
@@ -261,6 +291,10 @@ code {
 
   .frameworks {
     gap: 1.25rem;
+  }
+
+  .page-card {
+    min-height: 0;
   }
 }
 
