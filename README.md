@@ -4,17 +4,16 @@
 
 - Bootstrap styles inside a html element using class="" with with prestyled component like btn where it appliese several styles at once adding padding/font/settings/round corners and transistion  like for hovering on a button. 
  The btn style is defined inside bootstrap.min.css and styled in style.css.
+  - **Pros** include ready-made styles for buttons, forms, and tables that help you build a consistent page quickly.
+  - **Cons** include writing extra CSS to customize colors, spacing, and component styles.
+  - **Good for** admin dashboards, booking forms, and internal tools where standard components cover most of the design.
   - [Check out the Bootstrap page](bootstrap/index.html)
 
 - Tailwind styles also inside a html element using class="" with but with individual styles class="round-full bg-blush ". Rules on like the color of bg-blush is inside tailwind.css. 
+  - **Pros** include control over layout, spacing, and colors, which helps you match a custom design.
+  - **Cons** include longer class lists in the HTML and the need to rebuild this project's CSS after you change its Tailwind classes.
+  - **Good for** branded storefronts like Skins, portfolios, and campaign websites that need a custom layout and visual style.
   - [Check out the Tailwind page](tailwind/index.html)
-
-### Pros and cons
-
-| Framework | Pros | Cons | Projects it suits |
-| --- | --- | --- | --- |
-| Bootstrap | Ready-made styles for buttons, forms, and tables help you build a consistent page quickly. | A custom design can take extra CSS to change the default colors, spacing, and component styles. | Admin dashboards, booking forms, and internal tools where standard components cover most of the design. |
-| Tailwind | Utility classes give you control over layout, spacing, and colors, which helps you match a custom design. | The HTML can get crowded with class names. This project also needs a CSS rebuild after you change its Tailwind classes. | Branded storefronts like Skins, portfolios, and campaign websites that need a custom layout and visual style. |
 
 ## Interactive page:
 - Uses plain JavaScript and html and css. 
