@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Build and track a simple skincare routine with Skins.">
+    <title>Routine Builder | Skins</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./src/routine.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#builder">Skip to routine builder</a>
+
+    <header class="site-header page-width">
+      <a class="brand" href="#top">Skins</a>
+      <nav aria-label="Main navigation">
+        <a href="#builder">Routine builder</a>
+        <a href="#routine">Your routine</a>
+      </nav>
+    </header>
+
+    <main class="page-width">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <h1 id="page-title">Build your skincare routine</h1>
+          <p>Choose a moisturizer and the number of steps you want. We’ll put the products in order for you.</p>
+          <a class="primary-link" href="#builder">Build my routine</a>
+        </div>
+        <img src="./assets/hero.jpg" width="2172" height="724" alt="Skins serum, cream, and lotion beside a woman and pink flowers" fetchpriority="high">
+      </section>
+
+      <noscript>
+        <p class="script-note">Enable JavaScript to build and track your routine.</p>
+      </noscript>
+
+      <div id="builder" class="builder" tabindex="-1" hidden>
+        <section class="preferences panel" aria-labelledby="preferences-title">
+          <h2 id="preferences-title">Make it yours</h2>
+          <p>Try different options to see your routine update.</p>
+
+          <form id="preferences">
+            <fieldset>
+              <legend>Moisturizer</legend>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="moisturizer" value="lotion" checked>
+                  <span><strong>Light lotion</strong><small>A lightweight finish</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="moisturizer" value="cream">
+                  <span><strong>Rich cream</strong><small>A fuller texture</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Routine length</legend>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="length" value="2">
+                  <span><strong>2 steps</strong><small>Cleanse and moisturize</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="length" value="3" checked>
+                  <span><strong>3 steps</strong><small>Include a serum</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="preference-actions">
+              <a class="routine-link" href="#routine">View my routine</a>
+              <button class="reset-button" id="reset-routine" type="button">Start over</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="routine panel" id="routine" aria-labelledby="routine-title" tabindex="-1">
+          <h2 id="routine-title">Your routine</h2>
+          <p>Check off each step as you go.</p>
+          <div class="progress">
+            <p id="routine-status" role="status"></p>
+            <progress id="routine-progress" aria-label="Routine progress" max="3" value="0"></progress>
+          </div>
+          <ol id="routine-steps" class="steps" role="list"></ol>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer page-width">
+      <a class="brand" href="#top">Skins</a>
+      <p>© 2026 Skins</p>
+    </footer>
+
+    <template id="routine-step">
+      <li class="step">
+        <label class="step-card">
+          <img class="step-image" width="72" height="72" alt="">
+          <span class="step-copy">
+            <span class="step-position"></span>
+            <strong class="step-name"></strong>
+          </span>
+          <input type="checkbox" class="step-check">
+        </label>
+      </li>
+    </template>
+  </body>
+</html>

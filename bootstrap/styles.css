@@ -1,0 +1,480 @@
+:root {
+  --blush: #f3e7f5;
+  --rose: #e2a099;
+  --peach: #efc6ab;
+  --cocoa: #503d39;
+  --ink: #151011;
+  --muted: #583f3c;
+  --search: #e4d8e8;
+  --bs-body-bg: var(--blush);
+  --bs-body-color: var(--ink);
+  --bs-body-font-family: Arial, Helvetica, sans-serif;
+}
+
+.storefront {
+  min-height: 100dvh;
+}
+
+.storefront :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.promo-strip {
+  color: var(--muted);
+  background: var(--rose);
+  font-size: .75rem;
+}
+
+.promo-offer {
+  min-height: 2rem;
+  padding-block: .375rem;
+  gap: .375rem;
+}
+
+.promo-offer + .promo-offer {
+  border-top: 1px solid rgb(88 63 60 / 55%);
+}
+
+.promo-offer .icon {
+  width: .875rem;
+  height: .875rem;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+  padding-inline: 1rem;
+}
+
+.site-brand {
+  justify-self: start;
+  font-size: clamp(1.5rem, 2.22vw, 2rem);
+  line-height: 1;
+}
+
+.site-nav, .footer-nav {
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: 0;
+  --bs-nav-link-color: inherit;
+  --bs-nav-link-hover-color: inherit;
+}
+
+.site-nav {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  min-height: 2.5rem;
+  gap: 1rem;
+  font-size: clamp(.75rem, 1.08vw, 1rem);
+  letter-spacing: .16em;
+}
+
+.site-nav .nav-link {
+  letter-spacing: inherit;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.search-input {
+  width: clamp(5rem, 27vw, 11rem);
+  height: 2.25rem;
+  padding: 0 .75rem;
+  border: 0;
+  border-radius: .75rem;
+  background: var(--search);
+  font-size: .875rem;
+}
+
+.search-input:focus {
+  background: var(--search);
+  box-shadow: none;
+}
+
+.search-input::placeholder {
+  color: #655963;
+}
+
+.icon-button {
+  --bs-btn-color: inherit;
+  --bs-btn-hover-color: inherit;
+  --bs-btn-hover-bg: var(--search);
+  --bs-btn-active-color: inherit;
+  --bs-btn-active-bg: var(--search);
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  display: inline-grid;
+  place-items: center;
+}
+
+.header-icon {
+  width: 2rem;
+  height: 2.75rem;
+  border-radius: .5rem;
+}
+
+.bag-count {
+  min-width: 1rem;
+  padding: 0 .125rem;
+  background: var(--cocoa);
+  font-size: .625rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.hero-image {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-position: 54% center;
+  background: var(--peach);
+}
+
+.catalog {
+  padding: 1.75rem .625rem 1.25rem;
+}
+
+.catalog-grid {
+  --bs-gutter-x: 1.25rem;
+  --bs-gutter-y: 1.5rem;
+  max-width: 37.25rem;
+}
+
+.product-card {
+  padding-block: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: clamp(.75rem, .9vw, .875rem);
+}
+
+.product-card:hover span {
+  text-decoration: underline;
+}
+
+.product-photo {
+  height: auto;
+  aspect-ratio: 1;
+  margin-bottom: .5rem;
+  background: var(--peach);
+}
+
+.bestseller {
+  background: var(--rose);
+}
+
+.bestseller-inner {
+  max-width: 36rem;
+  margin-inline: auto;
+  padding: 1.25rem;
+  row-gap: 1.25rem;
+  font-size: clamp(.875rem, 1.11vw, 1rem);
+  line-height: 1.625;
+}
+
+.bestseller-photo {
+  width: 100%;
+  max-width: 11rem;
+  height: auto;
+  aspect-ratio: 1.05 / 1;
+}
+
+.bestseller-title {
+  margin-bottom: .75rem;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+}
+
+.shop-button {
+  --bs-btn-border-width: 0;
+  --bs-btn-padding-x: .75rem;
+  --bs-btn-padding-y: 0;
+  --bs-btn-font-size: .75rem;
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: var(--blush);
+  --bs-btn-hover-bg: white;
+  --bs-btn-active-bg: white;
+  min-height: 2.5rem;
+  margin-top: .75rem;
+}
+
+.site-footer {
+  padding-block: 1.5rem 1.75rem;
+  background: var(--cocoa);
+  color: var(--blush);
+  font-size: .75rem;
+  letter-spacing: .08em;
+}
+
+.footer-links {
+  max-width: 28rem;
+  gap: .5rem 3.5rem;
+}
+
+.footer-icon {
+  --bs-btn-hover-bg: rgb(255 255 255 / 15%);
+  --bs-btn-active-bg: var(--bs-btn-hover-bg);
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.footer-nav {
+  gap: 1.25rem;
+}
+
+.footer-nav .nav-link {
+  min-height: 2.25rem;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  line-height: 1.625;
+}
+
+.store-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(29rem, calc(100% - 2rem));
+  max-height: 90dvh;
+  margin: auto;
+  padding: 1.5rem;
+  background: var(--blush);
+  color: var(--ink);
+}
+
+.store-dialog::backdrop {
+  background: rgb(80 61 57 / 55%);
+}
+
+.dialog-close {
+  top: .75rem;
+  right: .75rem;
+}
+
+.dialog-close .btn {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.dialog-close .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.dialog-title {
+  padding-right: 2.5rem;
+  line-height: 1.333;
+}
+
+#dialog-content p {
+  margin-bottom: 0;
+}
+
+.dialog-photo {
+  display: block;
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 1;
+  margin: 0 auto 1.25rem;
+  border-radius: .75rem;
+  object-fit: cover;
+}
+
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 1.25rem;
+}
+
+.dialog-status {
+  margin-top: .75rem;
+}
+
+.dialog-status, .dialog-quantity {
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.dialog-button {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: .625rem;
+  --bs-btn-font-size: .875rem;
+  --bs-btn-font-weight: 500;
+  --bs-btn-border-width: 0;
+  --bs-btn-border-radius: var(--bs-border-radius-pill);
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: var(--rose);
+  --bs-btn-hover-bg: var(--peach);
+  --bs-btn-active-bg: var(--peach);
+}
+
+.dialog-button[aria-pressed="true"] {
+  --bs-btn-color: white;
+  --bs-btn-hover-color: white;
+  --bs-btn-active-color: white;
+  --bs-btn-bg: var(--cocoa);
+  --bs-btn-hover-bg: var(--cocoa);
+  --bs-btn-active-bg: var(--cocoa);
+}
+
+.dialog-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dialog-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem .75rem;
+  padding-block: .75rem;
+}
+
+.dialog-item + .dialog-item {
+  border-top: 1px solid rgb(80 61 57 / 20%);
+}
+
+.dialog-product-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 480px) {
+  .promo-offer, .bestseller-inner > div {
+    width: 50%;
+  }
+
+  .promo-offer + .promo-offer {
+    border-top: 0;
+    border-left: 1px solid rgb(88 63 60 / 55%);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-image {
+    aspect-ratio: 2.4 / 1;
+  }
+
+  .store-dialog {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo-offer {
+    height: clamp(1.75rem, 2.92vw, 2.65rem);
+    min-height: 0;
+  }
+
+  .site-header {
+    height: clamp(2.75rem, 4.72vw, 4.5rem);
+    grid-template-columns: 1fr auto 1fr;
+    padding-inline: 13.4% 8.4%;
+  }
+
+  .site-nav {
+    grid-column: auto;
+    grid-row: auto;
+    gap: clamp(.5rem, .9vw, 1rem);
+  }
+
+  .search-input {
+    width: clamp(6rem, 14.8vw, 13.25rem);
+    height: clamp(1.55rem, 2.59vw, 2.35rem);
+    padding-inline: clamp(.7rem, 2.75vw, 2.5rem);
+    font-size: clamp(.75rem, .99vw, .875rem);
+  }
+
+  .header-icon {
+    width: clamp(1.2rem, 1.65vw, 1.65rem);
+    height: 2.25rem;
+  }
+
+  .hero-image {
+    aspect-ratio: 3.12 / 1;
+    object-position: center;
+  }
+
+  .catalog {
+    padding: 3.98vw 0 1.34vw;
+  }
+
+  .catalog-grid {
+    --bs-gutter-x: 5.25vw;
+    --bs-gutter-y: 0;
+    width: calc(80% + var(--bs-gutter-x));
+    max-width: none;
+    transform: translateX(-.75vw);
+  }
+
+  .product-photo {
+    margin-bottom: .9vw;
+  }
+
+  .bestseller-inner {
+    width: 88.6%;
+    max-width: none;
+    min-height: 7.75rem;
+    margin-inline: 4.2% auto;
+    padding: 0;
+  }
+
+  .bestseller-photo {
+    width: 14.25vw;
+    max-width: none;
+  }
+
+  .bestseller-title {
+    margin-bottom: 1.1vw;
+    font-weight: 500;
+  }
+
+  .shop-button {
+    --bs-btn-padding-x: .5rem;
+    min-height: clamp(1.6rem, 2.16vw, 2rem);
+    margin-top: .85vw;
+  }
+
+  .site-footer {
+    min-height: 13.9vw;
+    padding-block: 2.65vw 2vw;
+  }
+
+  .footer-links {
+    width: 68%;
+    max-width: none;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-icon, .footer-nav .nav-link {
+    min-height: clamp(1.75rem, 2.5vw, 2.25rem);
+  }
+
+  .footer-icon {
+    width: clamp(1.75rem, 2.5vw, 2.25rem);
+    height: auto;
+  }
+
+  .footer-copyright {
+    margin-top: 3.45vw;
+    line-height: 1.5;
+  }
+}

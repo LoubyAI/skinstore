@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the Skins collection of serums, cleansers, creams and lotions.">
+    <title>Skins | Skincare</title>
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./src/storefront.js" defer></script>
+  </head>
+  <body class="storefront d-flex flex-column">
+    <header id="home">
+      <div class="promo-strip row g-0 text-center">
+        <p class="promo-offer col-12 d-flex align-items-center justify-content-center mb-0 px-2">
+          <img class="icon" src="./assets/icons/truck.svg" alt="">
+          Free shipping on orders over 100£
+        </p>
+        <p class="promo-offer col-12 d-flex align-items-center justify-content-center mb-0 px-2">
+          <img class="icon" src="./assets/icons/gift.svg" alt="">
+          Get 10% off your first order - Code: WELCOME10
+        </p>
+      </div>
+
+      <div class="site-header container-fluid align-items-center">
+        <a href="#home" class="site-brand navbar-brand m-0 p-0">Skins</a>
+        <nav aria-label="Main navigation" class="site-nav nav align-items-center justify-content-center text-uppercase">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#shop">Shop</a>
+          <button class="nav-link text-uppercase" type="button" data-panel="about">About</button>
+          <button class="nav-link text-uppercase" type="button" data-panel="contact">Contact</button>
+        </nav>
+        <div class="d-flex align-items-center justify-content-end">
+          <form id="search-form" role="search" class="d-flex align-items-center">
+            <label for="search" class="visually-hidden">Search products</label>
+            <input id="search" class="search-input form-control" type="search" placeholder="Search" autocomplete="off">
+            <button type="submit" class="header-icon icon-button btn" aria-label="Search products">
+              <img class="icon" src="./assets/icons/search.svg" alt="">
+            </button>
+          </form>
+          <button type="button" class="header-icon icon-button btn" aria-label="Favorites" data-panel="favorites">
+            <img class="icon" src="./assets/icons/heart.svg" alt="">
+          </button>
+          <button type="button" class="header-icon icon-button btn position-relative" aria-label="Shopping bag" data-panel="bag">
+            <img class="icon" src="./assets/icons/bag.svg" alt="">
+            <span id="bag-count" hidden class="bag-count badge rounded-pill position-absolute top-0 end-0"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section aria-label="Skins skincare">
+        <h1 class="visually-hidden">Skins skincare</h1>
+        <img src="./assets/hero.jpg" width="2172" height="724" fetchpriority="high"
+          alt="A woman resting her head on her hand beside Skins skincare and blush flowers"
+          class="hero-image d-block w-100 object-fit-cover">
+      </section>
+
+      <section id="shop" class="catalog container-fluid" aria-labelledby="shop-title">
+        <h2 id="shop-title" class="visually-hidden">Shop skincare</h2>
+        <p id="search-status" class="visually-hidden" aria-live="polite"></p>
+        <div class="catalog-grid row row-cols-2 row-cols-md-4 mx-auto">
+          <button type="button" data-product="serum" data-name="Hydrating Serum" data-description="Soft, glowing and hydrated skin"
+            class="product-card col text-center">
+            <img class="product-photo d-block w-100 object-fit-cover" src="./assets/serum.jpg" alt="" width="1254" height="1254">
+            <span>Serum</span>
+          </button>
+          <button type="button" data-product="cleanser" data-name="Gentle Cleanser" data-description="A gentle first step in your skincare routine."
+            class="product-card col text-center">
+            <img class="product-photo d-block w-100 object-fit-cover" src="./assets/cleanser.jpg" alt="" width="1254" height="1254">
+            <span>Cleanser</span>
+          </button>
+          <button type="button" data-product="cream" data-name="Daily Glow Cream" data-description="A face cream for your everyday skincare routine."
+            class="product-card col text-center">
+            <img class="product-photo d-block w-100 object-fit-cover" src="./assets/cream.jpg" alt="" width="1254" height="1254">
+            <span>Cream</span>
+          </button>
+          <button type="button" data-product="lotion" data-name="Hydrating Lotion" data-description="A moisturizing lotion in an easy-to-use pump bottle."
+            class="product-card col text-center">
+            <img class="product-photo d-block w-100 object-fit-cover" src="./assets/lotion.jpg" alt="" width="1254" height="1254">
+            <span>Lotion</span>
+          </button>
+        </div>
+        <p id="search-empty" hidden class="mb-0 py-4 text-center">No products match your search.</p>
+      </section>
+
+      <section class="bestseller" aria-labelledby="bestseller-title">
+        <div class="bestseller-inner row g-0 align-items-center text-center">
+          <div class="col-12 col-md-6">
+            <img src="./assets/serum.jpg" alt="Skins hydrating serum in a pink glass dropper bottle" width="1254" height="1254"
+              class="bestseller-photo d-block mx-auto rounded-4 object-fit-cover">
+          </div>
+          <div class="col-12 col-md-6">
+            <h2 id="bestseller-title" class="bestseller-title">Our bestseller</h2>
+            <p class="mb-0">Hydrating Serum</p>
+            <p class="mb-0">Soft, glowing and hydrated skin</p>
+            <button type="button" data-open-product="serum" class="shop-button btn rounded-pill text-uppercase">Shop now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer flex-grow-1 px-4 text-center">
+      <div class="footer-links d-flex d-md-grid flex-wrap align-items-center justify-content-center mx-auto">
+        <div class="d-flex align-items-center justify-content-center gap-2">
+          <button class="footer-icon icon-button btn rounded-circle" type="button" data-panel="youtube" aria-label="YouTube">
+            <img class="icon" src="./assets/icons/video.svg" alt="">
+          </button>
+          <button class="footer-icon icon-button btn rounded-circle" type="button" data-panel="whatsapp" aria-label="WhatsApp">
+            <img class="icon" src="./assets/icons/phone.svg" alt="">
+          </button>
+          <button class="footer-icon icon-button btn rounded-circle" type="button" data-panel="messenger" aria-label="Messenger">
+            <img class="icon" src="./assets/icons/chat.svg" alt="">
+          </button>
+        </div>
+        <nav aria-label="Footer navigation" class="footer-nav nav align-items-center justify-content-center">
+          <button type="button" class="nav-link" data-panel="contact">Contact</button>
+          <button type="button" class="nav-link" data-panel="address">Address</button>
+          <button type="button" class="nav-link" data-panel="policy">Policy</button>
+        </nav>
+      </div>
+      <p class="footer-copyright mb-0">Skins<br>© Copyright 2026</p>
+    </footer>
+
+    <dialog id="store-dialog" aria-labelledby="dialog-title" class="store-dialog rounded-4 border-0">
+      <form method="dialog" class="dialog-close position-absolute">
+        <button type="submit" class="icon-button btn rounded-circle" aria-label="Close">
+          <img class="icon" src="./assets/icons/close.svg" alt="">
+        </button>
+      </form>
+      <h2 id="dialog-title" class="dialog-title fs-4 mb-3"></h2>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
+</html>

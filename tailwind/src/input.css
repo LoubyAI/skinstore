@@ -1,0 +1,75 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "./storefront.js";
+
+@theme {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --color-blush: #f3e7f5;
+  --color-rose: #e2a099;
+  --color-peach: #efc6ab;
+  --color-cocoa: #503d39;
+  --color-ink: #151011;
+  --color-muted: #583f3c;
+  --color-search: #e4d8e8;
+  --color-search-ink: #655963;
+}
+
+@layer base {
+  button, a[href] {
+    @apply cursor-pointer;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-3;
+  }
+}
+
+@layer components {
+  .header-icon {
+    @apply grid h-11 w-8 place-items-center rounded-lg hover:bg-search md:h-9 md:w-[clamp(1.2rem,1.65vw,1.65rem)];
+  }
+
+  .footer-icon {
+    @apply grid size-9 place-items-center rounded-full hover:bg-white/15 md:size-[clamp(1.75rem,2.5vw,2.25rem)];
+  }
+
+  .product-card {
+    @apply text-center text-[clamp(.75rem,.9vw,.875rem)] leading-normal;
+  }
+
+  .product-photo {
+    @apply mb-2 aspect-square w-full bg-peach object-cover md:mb-[.9vw];
+  }
+
+  .dialog-button {
+    @apply rounded-full bg-rose px-4 py-2.5 text-sm font-medium hover:bg-peach aria-pressed:bg-cocoa aria-pressed:text-white;
+  }
+
+  .dialog-photo {
+    @apply mx-auto mb-5 aspect-square w-full max-w-60 rounded-xl object-cover;
+  }
+
+  .dialog-actions {
+    @apply mt-5 flex flex-wrap gap-2;
+  }
+
+  .dialog-status {
+    @apply mt-3 text-sm text-muted;
+  }
+
+  .dialog-list {
+    @apply divide-y divide-cocoa/20;
+  }
+
+  .dialog-item {
+    @apply flex flex-wrap items-center justify-between gap-x-3 gap-y-2 py-3;
+  }
+
+  .dialog-product-link {
+    @apply text-left underline underline-offset-4;
+  }
+
+  .dialog-quantity {
+    @apply text-sm text-muted;
+  }
+}
