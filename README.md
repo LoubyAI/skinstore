@@ -11,10 +11,10 @@
 
 ### Pros and cons
 
-| Framework | Pros | Cons | When I would use it |
+| Framework | Pros | Cons | Projects it suits |
 | --- | --- | --- | --- |
-| Bootstrap | Ready-made styles for buttons, forms, and tables help you build a consistent page quickly. | A custom design can take extra CSS to change the default colors, spacing, and component styles. | A dashboard that needs standard forms and tables. |
-| Tailwind | Utility classes give you control over layout, spacing, and colors, which helps you match a custom design. | The HTML can get crowded with class names. This project also needs a CSS rebuild after you change its Tailwind classes. | A branded storefront like Skins that needs its own colors and layout. |
+| Bootstrap | Ready-made styles for buttons, forms, and tables help you build a consistent page quickly. | A custom design can take extra CSS to change the default colors, spacing, and component styles. | Admin dashboards, booking forms, and internal tools where standard components cover most of the design. |
+| Tailwind | Utility classes give you control over layout, spacing, and colors, which helps you match a custom design. | The HTML can get crowded with class names. This project also needs a CSS rebuild after you change its Tailwind classes. | Branded storefronts like Skins, portfolios, and campaign websites that need a custom layout and visual style. |
 
 ## Interactive page:
 - Uses plain JavaScript and html and css. 
