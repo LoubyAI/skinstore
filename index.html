@@ -13,7 +13,7 @@
     <header class="site-header page-width">
       <a class="wordmark" href="./index.html" aria-label="Skins project home">Skins</a>
       <nav aria-label="Project navigation">
-        <a href="#project-title">About the project</a>
+        <a href="#about-project">About the project</a>
         <a href="#project-pages">Pages</a>
         <a href="#compare">Comparison</a>
       </nav>
@@ -28,6 +28,21 @@
             <p>I used Codex to help build and refine both storefronts and to create an interactive routine builder with plain JavaScript.</p>
           </div>
           <img src="./interactive/assets/hero.jpg" width="2172" height="724" alt="Skins skincare products and pink flowers beside a woman" fetchpriority="high">
+        </div>
+      </section>
+
+      <section class="project-overview" aria-labelledby="about-project">
+        <h2 id="about-project" tabindex="-1">About the project</h2>
+        <div class="overview-layout">
+          <div class="overview-copy">
+            <p>My project is a skincare storefront for Skins. Visitors can browse serums, cleansers, creams, and lotions, search for products, save favorites, and add items to a shopping bag.</p>
+            <p>I used the same products, colors, and layout in both storefronts so you can see how Tailwind and Bootstrap handle the same design.</p>
+          </div>
+          <article class="prototype-card">
+            <h3>Figma design</h3>
+            <p>The original desktop design shows the Skins layout, from the header and hero image to the product grid and bestseller section.</p>
+            <a class="page-link" href="https://www.figma.com/design/NMW41IDa9X5FAsLPRxMyoq/Projects?node-id=1-5&amp;t=2IkuICO5MWzeoVtv-1">Open the storefront design in Figma</a>
+          </article>
         </div>
       </section>
 
@@ -50,87 +65,87 @@
             <a class="page-link" href="./interactive/index.html">Open routine builder</a>
           </li>
         </ul>
-      </section>
 
-      <section class="comparison" aria-labelledby="compare">
-        <h2 id="compare" tabindex="-1">Compare the three approaches</h2>
-        <p>All three pages use CSS. Tailwind and Bootstrap provide classes for styling, and the routine builder uses custom rules in its own stylesheet.</p>
+        <div class="comparison">
+          <h3 id="compare" class="comparison-title" tabindex="-1">Compare the three approaches</h3>
+          <p>All three pages use CSS. Tailwind and Bootstrap provide classes for styling, and the routine builder uses custom rules in its own stylesheet.</p>
 
-        <div class="page-list">
-          <article class="page-card framework">
-            <h3>Tailwind</h3>
-            <p>Tailwind also styles an HTML element using <code>class=""</code>, with individual styles like <code>class="rounded-full bg-blush"</code>. The rule for the color of <code>bg-blush</code> is in <code>tailwind.css</code>.</p>
+          <div class="page-list">
+            <article class="page-card framework">
+              <h4>Tailwind</h4>
+              <p>Tailwind also styles an HTML element using <code>class=""</code>, with individual styles like <code>class="rounded-full bg-blush"</code>. The rule for the color of <code>bg-blush</code> is in <code>tailwind.css</code>.</p>
+              <dl>
+                <div>
+                  <dt>Pros</dt>
+                  <dd>Control over layout, spacing, and colors helps you match a custom design.</dd>
+                </div>
+                <div>
+                  <dt>Cons</dt>
+                  <dd>Class lists can get long in the HTML, and I need to rebuild this project’s CSS after I change its Tailwind classes.</dd>
+                </div>
+                <div>
+                  <dt>Good for</dt>
+                  <dd>Branded storefronts like Skins, portfolios, and campaign websites that need a custom layout and visual style.</dd>
+                </div>
+              </dl>
+              <a class="page-link" href="./tailwind/index.html">Check out the Tailwind page</a>
+            </article>
+
+            <article class="page-card framework">
+              <h4>Bootstrap</h4>
+              <p>Bootstrap styles an HTML element using <code>class=""</code> with a pre-styled class like <code>btn</code>. It applies several styles at once, including padding, font settings, rounded corners, and hover transitions. The <code>btn</code> style is defined in <code>bootstrap.min.css</code> and customized in <code>styles.css</code>.</p>
+              <dl>
+                <div>
+                  <dt>Pros</dt>
+                  <dd>Ready-made styles for buttons, forms, and tables help you build a consistent page quickly.</dd>
+                </div>
+                <div>
+                  <dt>Cons</dt>
+                  <dd>A custom design can require extra CSS for colors, spacing, and component styles.</dd>
+                </div>
+                <div>
+                  <dt>Good for</dt>
+                  <dd>Admin dashboards, booking forms, and internal tools where standard components cover most of the design.</dd>
+                </div>
+              </dl>
+              <a class="page-link" href="./bootstrap/index.html">Check out the Bootstrap page</a>
+            </article>
+
+            <article class="page-card framework">
+              <h4>Plain CSS and JavaScript</h4>
+              <p>My interactive page uses plain JavaScript, HTML, and CSS. The CSS controls how the page looks, and JavaScript updates the routine when I change the options.</p>
+              <dl>
+                <div>
+                  <dt>Pros</dt>
+                  <dd>I can style the page directly, and it runs without installing a framework or building the CSS.</dd>
+                </div>
+                <div>
+                  <dt>Cons</dt>
+                  <dd>I have to write and maintain the CSS for layout, spacing, and reusable styles myself.</dd>
+                </div>
+                <div>
+                  <dt>Good for</dt>
+                  <dd>Small sites or interactive demos with a few controls, like my routine builder.</dd>
+                </div>
+              </dl>
+              <a class="page-link" href="./interactive/index.html">Check out the routine builder</a>
+            </article>
+          </div>
+
+          <details class="demo-notes">
+            <summary>See responsive layout, motion, and color in the storefronts</summary>
             <dl>
               <div>
-                <dt>Pros</dt>
-                <dd>Control over layout, spacing, and colors helps you match a custom design.</dd>
+                <dt>Tailwind</dt>
+                <dd><code>md:grid-cols-4</code> gives the catalog four columns at the medium breakpoint. Utilities like <code>transition-colors</code> can add motion, and the Skins palette is defined with <code>@theme</code>.</dd>
               </div>
               <div>
-                <dt>Cons</dt>
-                <dd>Class lists can get long in the HTML, and I need to rebuild this project’s CSS after I change its Tailwind classes.</dd>
-              </div>
-              <div>
-                <dt>Good for</dt>
-                <dd>Branded storefronts like Skins, portfolios, and campaign websites that need a custom layout and visual style.</dd>
+                <dt>Bootstrap</dt>
+                <dd><code>row-cols-md-4</code> gives the catalog four columns at the medium breakpoint. Buttons get built-in transitions, and CSS variables set the Skins palette.</dd>
               </div>
             </dl>
-            <a class="page-link" href="./tailwind/index.html">Check out the Tailwind page</a>
-          </article>
-
-          <article class="page-card framework">
-            <h3>Bootstrap</h3>
-            <p>Bootstrap styles an HTML element using <code>class=""</code> with a pre-styled class like <code>btn</code>. It applies several styles at once, including padding, font settings, rounded corners, and hover transitions. The <code>btn</code> style is defined in <code>bootstrap.min.css</code> and customized in <code>styles.css</code>.</p>
-            <dl>
-              <div>
-                <dt>Pros</dt>
-                <dd>Ready-made styles for buttons, forms, and tables help you build a consistent page quickly.</dd>
-              </div>
-              <div>
-                <dt>Cons</dt>
-                <dd>A custom design can require extra CSS for colors, spacing, and component styles.</dd>
-              </div>
-              <div>
-                <dt>Good for</dt>
-                <dd>Admin dashboards, booking forms, and internal tools where standard components cover most of the design.</dd>
-              </div>
-            </dl>
-            <a class="page-link" href="./bootstrap/index.html">Check out the Bootstrap page</a>
-          </article>
-
-          <article class="page-card framework">
-            <h3>Plain CSS and JavaScript</h3>
-            <p>My interactive page uses plain JavaScript, HTML, and CSS. The CSS controls how the page looks, and JavaScript updates the routine when I change the options.</p>
-            <dl>
-              <div>
-                <dt>Pros</dt>
-                <dd>I can style the page directly, and it runs without installing a framework or building the CSS.</dd>
-              </div>
-              <div>
-                <dt>Cons</dt>
-                <dd>I have to write and maintain the CSS for layout, spacing, and reusable styles myself.</dd>
-              </div>
-              <div>
-                <dt>Good for</dt>
-                <dd>Small sites or interactive demos with a few controls, like my routine builder.</dd>
-              </div>
-            </dl>
-            <a class="page-link" href="./interactive/index.html">Check out the routine builder</a>
-          </article>
+          </details>
         </div>
-
-        <details class="demo-notes">
-          <summary>See responsive layout, motion, and color in the storefronts</summary>
-          <dl>
-            <div>
-              <dt>Tailwind</dt>
-              <dd><code>md:grid-cols-4</code> gives the catalog four columns at the medium breakpoint. Utilities like <code>transition-colors</code> can add motion, and the Skins palette is defined with <code>@theme</code>.</dd>
-            </div>
-            <div>
-              <dt>Bootstrap</dt>
-              <dd><code>row-cols-md-4</code> gives the catalog four columns at the medium breakpoint. Buttons get built-in transitions, and CSS variables set the Skins palette.</dd>
-            </div>
-          </dl>
-        </details>
       </section>
     </main>
 
