@@ -132,19 +132,25 @@
             </article>
           </div>
 
-          <details class="demo-notes">
-            <summary>See responsive layout, motion, and color in the storefronts</summary>
+          <div class="button-comparison">
+            <h4>How both pages style “Shop now”</h4>
             <dl>
               <div>
                 <dt>Tailwind</dt>
-                <dd><code>md:grid-cols-4</code> gives the catalog four columns at the medium breakpoint. Utilities like <code>transition-colors</code> can add motion, and the Skins palette is defined with <code>@theme</code>.</dd>
+                <dd>
+                  <p class="button-classes"><code>rounded-full bg-blush px-3 hover:bg-white</code></p>
+                  <p>Each class applies one style. <code>rounded-full</code> makes the button pill-shaped, <code>bg-blush</code> sets the background, and <code>px-3</code> adds horizontal padding. <code>hover:bg-white</code> makes the background white on hover. Tailwind generates the rules in <code>tailwind.css</code>.</p>
+                </dd>
               </div>
               <div>
                 <dt>Bootstrap</dt>
-                <dd><code>row-cols-md-4</code> gives the catalog four columns at the medium breakpoint. Buttons get built-in transitions, and CSS variables set the Skins palette.</dd>
+                <dd>
+                  <p class="button-classes"><code>shop-button btn rounded-pill</code></p>
+                  <p>Bootstrap’s <code>btn</code> applies several base styles at once, and <code>rounded-pill</code> gives the button its shape. The custom <code>shop-button</code> rule in <code>bootstrap/styles.css</code> sets the padding, blush background, and white hover color.</p>
+                </dd>
               </div>
             </dl>
-          </details>
+          </div>
         </div>
       </section>
     </main>
